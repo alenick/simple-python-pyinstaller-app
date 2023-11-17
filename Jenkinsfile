@@ -1,0 +1,12 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            agent  any
+            steps {
+                sh 'python3 -m py_compile sources/add2vals.py sources/calc.py' 
+                
+            }
+        }
+    }
+}
